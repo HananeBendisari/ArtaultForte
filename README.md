@@ -1,5 +1,8 @@
 # ForteVault – Milestone-based Escrow with On-chain Policy Enforcement (EasyA x Forte – Consensus Hackathon 2025)
 
+> Rule-based escrow for milestone payments, using Forte RulesEngine to protect both client and artist. Built with Solidity + Foundry.
+
+
 ## Problem Statement
 
 Freelancers and artists often face three critical issues in creative contracts:
@@ -135,6 +138,20 @@ ArtaultForte/
 * This project is designed to run entirely in a local environment.
 * For production use, deploy with a valid RulesEngine contract and apply policies externally.
 * Mocked reverts simulate expected behavior for this hackathon use case.
+
+## Technical Description
+
+This project uses the Forte RulesEngine SDK to dynamically enforce on-chain conditions via Solidity modifiers.
+
+- Written in **Solidity** and tested with **Foundry**
+- Integrated with the **Forte RulesEngine** (through injected `checkRulesBefore...` modifiers)
+- Policy enforcement done through local `policy.json` and `RulesEngineClientCustom` logic
+- No deployment to testnet: all logic is tested and simulated in a local **Anvil** instance
+
+## Demo Video
+
+Watch the demo here:  
+[https://www.loom.com/share/72ceb62f68d148a5b93672ae2e9477cd](https://www.loom.com/share/72ceb62f68d148a5b93672ae2e9477cd)
 
 ## Author
 
